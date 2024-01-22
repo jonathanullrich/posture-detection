@@ -4,8 +4,6 @@ import {
     DrawingUtils
 } from "https://cdn.skypack.dev/@mediapipe/tasks-vision@0.10.0";
 
-console.log("hello");
-
 const demosSection = document.getElementById("demos");
 
 let poseLandmarker = undefined;

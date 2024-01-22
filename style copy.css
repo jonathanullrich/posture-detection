@@ -1,39 +1,27 @@
 @use "@material";
 
-html {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
 body {
     font-family: roboto;
-    font-size: 2rem;
-    margin: 0 20%;
-    --mdc-theme-primary: #559D76;
+    margin: 2em;
+    color: #3d3d3d;
+    --mdc-theme-primary: #007f8b;
     --mdc-theme-on-primary: #f1f3f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#logo {
-    width: 20rem;
 }
 
 h1 {
-    font-weight: 800;
+    color: #007f8b;
 }
 
-#lower-header {
-    margin-top: 25px;
-    margin-left: 100px;
-    display: block;
-    font-style: italic;
+h2 {
+    clear: both;
+}
+
+em {
+    font-weight: bold;
 }
 
 video {
+    clear: both;
     display: block;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
@@ -45,13 +33,22 @@ section {
     transition: opacity 500ms ease-in-out;
 }
 
-.removed,
-.invisible {
+header,
+footer {
+    clear: both;
+}
+
+.removed {
     display: none;
 }
 
 .invisible {
     opacity: 0.2;
+}
+
+.note {
+    font-style: italic;
+    font-size: 130%;
 }
 
 .videoView,
@@ -102,23 +99,29 @@ section {
     width: 100%;
 }
 
-
-/* Button and accent color */
-.mdc-button--raised {
-    background-color: #559D76;
-    /* Accent color for the button */
-    color: #fff;
-    /* Text color for the button */
+/* Reset some default styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
 }
 
-/* Ripple effect color */
-.mdc-button--raised .mdc-button__ripple {
-    background-color: rgba(85, 157, 118, 0.6);
-    /* Adjusted ripple color based on the accent color */
+body {
+    font-family: 'Helvetica', sans-serif;
+    /* Use a clean, sans-serif font */
+    background-color: #fff;
+    /* White background */
+    color: #000;
+    /* Black text color */
+}
+
+h1 {
+    color: #559D76;
+    /* Accent color for headings */
 }
 
 /* Mobile styles */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1080px) {
     /* Adjustments for small screens */
 
     #liveView {
@@ -145,4 +148,18 @@ section {
         height: auto;
         /* Maintain aspect ratio */
     }
+}
+
+/* Button and accent color */
+.mdc-button--raised {
+    background-color: #559D76;
+    /* Accent color for the button */
+    color: #fff;
+    /* Text color for the button */
+}
+
+/* Ripple effect color */
+.mdc-button--raised .mdc-button__ripple {
+    background-color: rgba(85, 157, 118, 0.6);
+    /* Adjusted ripple color based on the accent color */
 }
