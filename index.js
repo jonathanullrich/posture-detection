@@ -4,6 +4,23 @@ import {
     DrawingUtils
 } from "https://cdn.skypack.dev/@mediapipe/tasks-vision@0.10.0";
 
+let showDemo = false;
+
+const codeButton = document.getElementById("codeButton");
+const referralContainer = document.getElementById("referral-container");
+const demoContainer = document.getElementById("demo-container");
+
+codeButton.addEventListener("click", () => {
+    showDemo = !showDemo
+    console.log(showDemo)
+    if (showDemo == true) {
+        referralContainer.classList.add("hidden");
+        demoContainer.classList.add("container");
+        referralContainer.classList.remove("container");
+        demoContainer.classList.remove("hidden");
+    }
+});
+
 const demosSection = document.getElementById("demos");
 
 let poseLandmarker = undefined;
@@ -58,11 +75,11 @@ function enableCam(event) {
 
     if (webcamRunning === true) {
         webcamRunning = false;
-        enableWebcamButton.innerText = "ENABLE PREDICTIONS";
+        enableWebcamButton.innerText = "SCAN EXERCISE";
     } else {
         webcamRunning = true;
-        enableWebcamButton.innerText = "DISABLE PREDICTIONS";
-        demosSection.classList.remove("invisible");
+        enableWebcamButton.innerText = "DISABLE SCAN";
+        demosSection.classList.remove("hidden");
     }
 
     // getUsermedia parameters.

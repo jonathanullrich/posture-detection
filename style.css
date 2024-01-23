@@ -8,141 +8,69 @@ html {
 }
 
 body {
+    height: 100%;
     font-family: roboto;
-    font-size: 2rem;
-    margin: 0 20%;
+    margin: 0 12%;
     --mdc-theme-primary: #559D76;
     --mdc-theme-on-primary: #f1f3f4;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 #logo {
-    width: 20rem;
+    margin: 25px 0;
+    align-self: center;
+    width: 10rem;
+}
+
+header {
+    align-self: center;
 }
 
 h1 {
-    font-weight: 800;
+    margin: 0;
+    font-size: 1.25rem;
 }
 
 #lower-header {
-    margin-top: 25px;
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: 50px;
     display: block;
     font-style: italic;
+    color: #559D76;
 }
 
-video {
-    display: block;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
+#lower-header::before {
+    content: "> ";
 }
 
-section {
-    opacity: 1;
-    transition: opacity 500ms ease-in-out;
+main {
+    margin-top: 25px;
 }
 
-.removed,
-.invisible {
+h2 {
+    font-size: 1.1rem;
+}
+
+button {
+    margin: 20px 0;
+}
+
+input {
+    height: 35px;
+}
+
+li {
+    margin-left: 0;
+}
+
+.hidden {
     display: none;
 }
 
-.invisible {
-    opacity: 0.2;
-}
-
-.videoView,
-.detectOnClick {
-    position: relative;
-    float: left;
-    width: 48%;
-    margin: 2% 1%;
-    cursor: pointer;
-}
-
-.videoView p,
-.detectOnClick p {
-    position: absolute;
-    padding: 5px;
-    background-color: #007f8b;
-    color: #fff;
-    border: 1px dashed rgba(255, 255, 255, 0.7);
-    z-index: 2;
-    font-size: 12px;
-    margin: 0;
-}
-
-.highlighter {
-    background: rgba(0, 255, 0, 0.25);
-    border: 1px dashed #fff;
-    z-index: 1;
-    position: absolute;
-}
-
-.canvas {
-    z-index: 1;
-    position: absolute;
-    pointer-events: none;
-}
-
-.output_canvas {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-}
-
-.detectOnClick {
-    z-index: 0;
-}
-
-.detectOnClick img {
+.container {
+    height: 100%;
     width: 100%;
-}
-
-
-/* Button and accent color */
-.mdc-button--raised {
-    background-color: #559D76;
-    /* Accent color for the button */
-    color: #fff;
-    /* Text color for the button */
-}
-
-/* Ripple effect color */
-.mdc-button--raised .mdc-button__ripple {
-    background-color: rgba(85, 157, 118, 0.6);
-    /* Adjusted ripple color based on the accent color */
-}
-
-/* Mobile styles */
-@media screen and (max-width: 900px) {
-    /* Adjustments for small screens */
-
-    #liveView {
-        width: 100%;
-        /* Make the video container full width */
-        box-sizing: border-box;
-    }
-
-    #webcamButton {
-        margin-bottom: 20px;
-        /* Add some space below the button */
-    }
-
-    #webcam {
-        width: 100%;
-        /* Make the video fill the container */
-        height: auto;
-        /* Maintain aspect ratio */
-    }
-
-    #output_canvas {
-        width: 100%;
-        /* Make the canvas fill the container */
-        height: auto;
-        /* Maintain aspect ratio */
-    }
+    display: flex;
+    flex-direction: column;
 }

@@ -4,34 +4,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- <script defer src="index.js" type="module"></script> -->
+    <script defer src="index.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 </script>
 
 <body>
     <img id="logo" src="logo_green.png" alt="logo">
 
-    <h1>
-        Exercise Correctly.<span id="lower-header">Recover Quickly.</span>
-    </h1>
-    <h2>Enter your referral code:</h2>
-    <input type="text" id="inputString" name="inputString" placeholder="Code" required>
-    <button id="webcamButton" class="mdc-button mdc-button--raised">
-        <span class="mdc-button__ripple"></span>
-        <span class="mdc-button__label">Enter</span>
-    </button>
+    <header>
+        <h1>
+            Exercise Correctly.
+            <span id="lower-header">Recover Quickly.</span>
+        </h1>
+    </header>
 
-    <section id="demos" class="invisible">
-        <div id="liveView" class="videoView">
+    <main>
+        <hr>
+        <div id="referral-container" class="container">
+            <h2>Enter your referral code:</h2>
+            <input type="text" id="inputString" name="inputString" placeholder="Code" required>
+            <button id="codeButton" class="mdc-button mdc-button--raised">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__label">Enter</span>
+            </button>
+        </div>
+
+        <div id="demo-container" class="hidden">
+            <h2>Exercise Programm</h2>
+            <ul>
+                <li>Arm-Workout <a href="">(Learn more)</a></li>
+                <li>Circular Motion <a href="">(Learn more)</a></li>
+            </ul>
             <button id="webcamButton" class="mdc-button mdc-button--raised">
                 <span class="mdc-button__ripple"></span>
                 <span class="mdc-button__label">SCAN EXERCISE</span>
             </button>
-            <div style="position: relative;">
-                <video id="webcam" style="width: 1280px; height: 720px; position: abso" autoplay playsinline></video>
-                <canvas class="output_canvas" id="output_canvas" width="1280" height="720"
-                    style="position: absolute; left: 0px; top: 0px;"></canvas>
-            </div>
+            <section id="demos" class="hidden">
+                <div id="liveView" class="videoView">
+                    <div style="position: relative;">
+                        <!-- <video id="webcam" style="width: 1280px; height: 720px; position: abso" autoplay playsinline></video> -->
+                        <video id="webcam" autoplay playsinline></video>
+                        <canvas class="output_canvas" id="output_canvas" width="1280" height="720"
+                            style="position: absolute; left: 0px; top: 0px;"></canvas>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+    </main>
