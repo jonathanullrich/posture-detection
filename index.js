@@ -27,8 +27,8 @@ let poseLandmarker = undefined;
 let runningMode = "IMAGE";
 let enableWebcamButton;
 let webcamRunning = false;
-const videoHeight = "360px";
-const videoWidth = "480px";
+const videoHeight = "100%";
+const videoWidth = "100%";
 
 // Before we can use PoseLandmarker class we must wait for it to finish
 // loading. Machine Learning models can be large and take a moment to
@@ -76,6 +76,7 @@ function enableCam(event) {
     if (webcamRunning === true) {
         webcamRunning = false;
         enableWebcamButton.innerText = "SCAN EXERCISE";
+        demosSection.classList.add("hidden");
     } else {
         webcamRunning = true;
         enableWebcamButton.innerText = "DISABLE SCAN";
