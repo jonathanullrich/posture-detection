@@ -75,6 +75,7 @@ ul span {
     display: block;
     color: #559D76;
     font-style: italic;
+    /* cursor: pointer; */
 }
 
 ul {
@@ -84,7 +85,6 @@ ul {
 }
 
 li {
-    cursor: pointer;
     padding: 10px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
@@ -93,7 +93,14 @@ li {
 
 #exercise {
     width: 100%;
+    max-width: 250px;
     margin: 25px 0;
+    align-self: center;
+}
+
+
+.info-text {
+    flex-direction: column;
 }
 
 #info {

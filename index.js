@@ -139,7 +139,7 @@ toggles.forEach(function (toggle) {
 
         // Toggle the display property of the <p> element
         if (infoText.style.display === 'none' || infoText.style.display === '') {
-            infoText.style.display = 'block';
+            infoText.style.display = 'flex';
         } else {
             infoText.style.display = 'none';
         }
