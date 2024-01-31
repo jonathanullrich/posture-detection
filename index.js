@@ -127,3 +127,25 @@ async function predictWebcam() {
         window.requestAnimationFrame(predictWebcam);
     }
 }
+
+let toggles = document.querySelectorAll('.toggle');
+
+// Add click event listener to each span
+toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+        // Get the next sibling, which is the <p> element
+        // var infoText = document.querySelector(".info-text");
+        var infoText = this.nextElementSibling;
+
+        // Toggle the display property of the <p> element
+        if (infoText.style.display === 'none' || infoText.style.display === '') {
+            infoText.style.display = 'block';
+        } else {
+            infoText.style.display = 'none';
+        }
+    });
+});
+
+// const close = document.getElementById("webcam").addEventListener("click", () => {
+//     document.getElementById('demos').style.display = 'none';
+// })

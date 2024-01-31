@@ -33,15 +33,29 @@
 
         <div id="demo-container" class="hidden">
             <h2>Exercise Programm</h2>
+            <p>Choose exercise:</p>
             <ul>
-                <li>Arm-Workout <a href="">(Learn more)</a></li>
-                <li>Circular Motion <a href="">(Learn more)</a></li>
+                <li>
+                    <span class="toggle">Shoulder <span class="normal">- Linear Motion</span></span>
+                    <div class="hidden info-text">
+                        <img id="exercise" src="shoulder.png" alt="exercise">
+                        <p>
+                            Lean forward on the table. Let your arm hang down like a pendulum. Then gently swing it back
+                            and forth in a linear motion along the edge of the table.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <span class="toggle">Shoulder <span class="normal">- Circular Motion</span></span>
+                    <p class="hidden info-text">More exercise descriptions coming soon</p>
+                </li>
             </ul>
             <button id="webcamButton" class="mdc-button mdc-button--raised">
                 <span class="mdc-button__ripple"></span>
                 <span class="mdc-button__label">SCAN EXERCISE</span>
             </button>
             <section id="demos" class="hidden">
+                <!-- <p id="info">On mobile: rotate screen</p> -->
                 <div id="liveView" class="videoView">
                     <div style="position: relative;">
                         <!-- <video id="webcam" style="width: 1280px; height: 720px; position: abso" autoplay playsinline></video> -->
